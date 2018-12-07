@@ -17,7 +17,7 @@ NPM:
 $ npm install --save arcgis-x
 ```
 
-### Example
+### Example Usage
 
 #### Import
 
@@ -25,10 +25,8 @@ $ npm install --save arcgis-x
 import arcgisX from "arcgis-x";
 ```
 
-#### `toGeoJson()`
-
 ```javascript
-let geojson = arcgisX.toGeoJson({
+let sample = {
   spatialReference: {
     wkid: 4326
   },
@@ -51,7 +49,13 @@ let geojson = arcgisX.toGeoJson({
       }
     }
   ]
-});
+};
+```
+
+#### `toGeoJson()`
+
+```javascript
+let geojson = arcgisX.toGeoJson(sample);
 
 //  {
 //    type: 'FeatureCollection',
