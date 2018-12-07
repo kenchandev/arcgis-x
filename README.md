@@ -3,7 +3,6 @@
 <p>
   <a href="https://circleci.com/gh/kenchandev/arcgis-x"><img src="https://circleci.com/gh/kenchandev/arcgis-x.svg?style=svg" alt="CircleCI"/></a>
   <a href="https://github.com/kenchandev/arcgis-x/pulls"><img src="https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg" alt="PR's Welcome"></a>
-  </p>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 </p>
 
