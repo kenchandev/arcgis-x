@@ -47,7 +47,7 @@ fs.readFile(
         );
       })
     ])
-      .then(([csvKml, kml]) => {
+      .then(() => {
         console.log("Success!");
       })
       .catch(err => {
