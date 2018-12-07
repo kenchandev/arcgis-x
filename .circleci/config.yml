@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.12.0
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: "sudo npm install -g npm@latest"
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: check-format
+          command: npm run format:check
+      - run:
+          name: lint
+          command: npm run lint
+      - run:
+          name: test
+          command: npm test
+      - run:
+          name: code-coverage
+          command: npm run test:coverage
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
